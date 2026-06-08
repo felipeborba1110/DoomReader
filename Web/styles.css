@@ -1,0 +1,319 @@
+:root{
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  --tomato: #fa5656;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #191A1C;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  height: 80px;
+  box-shadow: #242627 0 0 0 2px;
+  padding: 10px;
+  font-family: "Koulen", sans-serif;
+  font-size: 36px;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  height: 90px;
+  padding: 10px;
+  font-family: "Lexend", sans-serif;
+  align-self: center;
+}
+
+.title-card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 10px 0 10px;
+  border-style: solid;
+  border-color: #242627;
+  border-width: 2px;
+  border-radius: 12px;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: 18px;
+}
+
+.sub-title {
+  font-size: 14px;
+  color: #969696;
+}
+
+#editBtn {
+  display: inline;
+  height: 100%;
+  width: 15px;
+  background-image: url("images/edit.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: transparent;
+  border: none;
+  filter: invert(50%);
+}
+
+#editBtn:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  align-self: center;
+}
+
+.chapter-label {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+
+}
+
+.chapter-text {
+  color: white;
+  font-family: "Lexend", sans-serif;
+  padding: 0px 10px 0px 10px;
+  border-style: solid;
+  border-image: linear-gradient(to right, white, transparent 40%) 1 round;
+  border-left: none;
+  border-bottom: none;
+}
+
+.chapter-number {
+  padding-top: 5px;
+  display: block;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+}
+
+#chapter-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#first-trigger {
+  background-color: #242627;
+  width: 500px;
+  height: 8px;
+  border-radius: 100px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.spacer {
+  display: flex;
+  padding: 0px;
+  flex-grow: 1;
+}
+
+#db-live {
+  position: fixed;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  background-color: #242627;
+  border-style: solid;
+  border-color: var(--night-rider);
+  border-width: 1px;
+  border-radius: 10%;
+  font-family: "Lexend", sans-serif;
+  left: 97%;
+  top: 94%;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#live-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 75%;
+  top: 12%;
+  background-color: var(--tomato);
+  border-radius: 50%;
+}
+
+.page {
+  width: 100%;
+}
+
+#modal {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.form {
+  font-family: Helvetica, sans-serif;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: var(--af-white);
+  background-color: var(--black);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+}
+
+/*----heading and description-----*/
+
+.info {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/*----input-fields------*/
+
+.form .input-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form .input-fields input {
+  height: 2.5em;
+  width: 20em;
+  outline: none;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: var(--af-white);
+  border-radius: 5px;
+  border: 2.5px solid var(--eer-black);
+  background-color: var(--eer-black);
+}
+
+.form .input-fields input:focus {
+  border: 1px solid var(--af-white);
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .15);
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+/*-----verify and clear buttons-----*/
+
+.action-btns {
+  display: flex;
+  margin-top: 20px;
+  gap: 0.5rem;
+}
+
+.confirm {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--night-rider);
+  text-shadow: none;
+  background: var(--af-white);
+  box-shadow: transparent;
+  border: 1px solid var(--af-white);
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.confirm:hover,
+.confirm:focus {
+  color: var(--night-rider);
+  background: var(--white);
+}
+
+.import {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ch-white);
+  text-shadow: none;
+  background: transparent;
+  border: 1px solid var(--ch-white);
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.import:hover,
+.clear:focus {
+  color: var(--tomato);
+  background-color: transparent;
+  border: 1px solid var(--tomato);
+}
+
+/*-----close button------*/
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: var(--tomato);
+  color: var(--ch-white);
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .5s ease;
+}
+
+.close:hover {
+  background-color: var(--eer-black);
+  color: var(--white);
+}
