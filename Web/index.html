@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doomreader</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        DOOMREADER
+    </div>
+    <div id="modal" style="display:none;">
+        <form class="form">
+            <span class="close">X</span>
+            <div class="info">
+                <span class="modal-title">Vamos Começar</span>
+                <p class="description">Insira a URL de origem para carregar as páginas</p>
+            </div>
+            <div class="input-fields">
+                <input autocomplete="off" id="domain" placeholder="">
+            </div>
+            <div class="action-btns">
+                <a class="confirm">Confirmar</a>
+                <a class="import">Importar</a>
+            </div>
+        </form>
+    </div>
+    <div class="title">
+        <div class="title-card">
+            <div class="main-title">
+                Title
+            </div>
+            <div class="sub-title">
+                <span id="sourceText">From xxx</span>
+                <button id="editBtn"></button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="chapter-label">
+            <!-- new chapter numbers comes here -->
+        </div>
+        <div class="chapter">
+            <div id="chapter-content">
+                <!-- new chapter pages comes here -->
+            </div>
+            <div id="first-trigger"></div>
+        </div>
+        <div class="spacer"></div>
+        <div id="db-live">
+            <div id="live-text"></div>
+            <div id="live-dot"></div>
+        </div>
+    </div>
+</body>
+
+</html>
